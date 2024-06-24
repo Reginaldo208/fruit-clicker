@@ -1,0 +1,116 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    user-select: none;
+}
+
+#contador {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#emoji {
+    font-size: 5em;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#loja {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#sairLoja {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+    align-self: flex-end;
+    width: 100%;
+}
+
+#janelaLoja {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    padding: 20px;
+    overflow-y: auto;
+    transform: translateX(100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+#janelaLoja.ativo {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.emoji-item {
+    cursor: pointer;
+    font-size: 2em;
+    text-align: center;
+    width: 45%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(100%);
+}
+
+.emoji-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.5em;
+}
+
+.emoji-item.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.emoji-item.comprado {
+    filter: grayscale(0%);
+}
+
+.emoji-item.ativo {
+    background-color: #eee;
+}
+
+#aumentarNivel {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
